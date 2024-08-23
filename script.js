@@ -1,5 +1,5 @@
 //Sorting an array in ascending order
-function sortArray(arr) {
+/*function sortArray(arr) {
     let n = arr.length;
     for (let i = 0; i < n - 1; i++){
         for (let j = 0; j < n - i - 1; j++) {
@@ -23,7 +23,7 @@ console.log(sortedArray);
 
 
 
-// Arrays that sum up to a given number
+// // Arrays that sum up to a given number
 function sumOfPairs(sum, numbers) {
     let pairs = [];
     let numSet = new Set();
@@ -65,4 +65,28 @@ let number = 7;
 
 let multiplicationTable = generateMultiplicationTable(number);
 console.log(multiplicationTable);
+*/
 
+
+
+
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+
+function buildTriangle(length) {
+    var triangle = "";
+    
+    var lineNumber = 1;
+    
+    for(lineNumber=1; lineNumber<=length; lineNumber++){
+        triangle = triangle + makeLine(lineNumber);
+    }
+    return triangle;
+}
+
+console.log(buildTriangle(10));
